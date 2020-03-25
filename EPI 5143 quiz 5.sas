@@ -70,15 +70,15 @@ if last.hdghraencwid then output;
 retain dm count;
 run;
 
-proc print data=diabetes;
+proc print data=diabetes;/*after flattening, 32844 observations*/
 run;
 
-proc freq data=diabetes;
+proc freq data=diabetes;/*coded as diabetic 1724 (10 duplications removed), coded as non-diabetic 31120*/
 table dm count;
 run;
 
 ********************HINT 4************************************************;
-
+*MERGING PHASE;
 
 proc sort data=unique;
 by hraencwid;
@@ -97,6 +97,9 @@ by hraencwid;
 if a;
 if dm = . then dm = 0; 
 if count =. then count=0; 
+run;
+
+Proc print data=merging;
 run;
 
 proc freq data=merging;
