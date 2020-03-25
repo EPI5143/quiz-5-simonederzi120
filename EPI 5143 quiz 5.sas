@@ -52,9 +52,6 @@ run;
 
 ********************HINT 3************************************************;
 *Flattening;
-proc sort data=quiz5.nhrdiagnosis out=diag;
-by hdghraencwid;
-run;
 
 
 data diabetes;
