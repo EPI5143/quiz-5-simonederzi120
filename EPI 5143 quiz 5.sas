@@ -104,7 +104,7 @@ table dm;
 run;
 
 
-*Proportion of admissions which recorded a diagnosis of diabetes between 
+*Proportion of admissions which recorded diagnosis of diabetes between 
 Jan 1, 2003 and Dec 31 2004: 83/2,230=3.72%
 
 dm    Frequency    Percent    Cumulative Frequency    Cumulative Percent 
