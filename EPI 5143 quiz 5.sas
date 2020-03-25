@@ -3,8 +3,9 @@ Libname quiz5 "c:\sas\epi 5143";
 
 
 ********************HINT 1************************************************;
-*Spine dataset with unique admissions between Jan 1 2003 and December 31 2004. Formating  
-"hraadmdtm" variable. ;
+
+*SPINE DATASET with unique admissions between Jan 1 2003 and December 31 2004. Formating  
+"hraadmdtm" variable (new variable called "date" with only the date part, time part to be removed) ;
 data unique;
 set quiz5.nhrabstracts;
 date=datepart(hraadmdtm);
@@ -13,15 +14,16 @@ keep hraencwid hraadmdtm date;
 if '01jan2003'd <= date <= '31dec2004'd then output;
 run;
 
-*Proc sort to delete duplications: 2230 observations;
+*Checking the dataset with admissions from Jan 1 2003 and December 31 2004 and date formatted (only date, no hours);
+Proc print data=unique;
+run;
+
+*Proc sort to delete duplications: 2230 observations (no duplications found);
 proc sort data=unique nodupkey;
 by hraEncWID;
 run;
 
-*Duble checking number of observations for hraencwid;
-proc freq data=unique;
-table hraencwid;
-run;
+
 
 
 
@@ -32,6 +34,8 @@ if hdgcd in: ('250' 'E11' 'E10') then dm=1;
 else dm=0;
 run;
 
+proc print data=diabetes;/*113083 observations in this dataset, diabetes coding was checked and it was correct*/
+run;
 
 proc freq data=diabetes;
 table dm;
