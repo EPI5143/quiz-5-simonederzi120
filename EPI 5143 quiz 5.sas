@@ -70,6 +70,9 @@ if last.hdghraencwid then output;
 retain dm count;
 run;
 
+proc print data=diabetes;
+run;
+
 proc freq data=diabetes;
 table dm count;
 run;
