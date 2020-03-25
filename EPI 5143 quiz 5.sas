@@ -67,7 +67,7 @@ if last.hdghraencwid then output;
 retain dm count;
 run;
 
-proc print data=diabetes;/*after flattening, 32844 observations*/
+proc print data=diabetes;
 run;
 
 proc freq data=diabetes;/*coded as diabetic 1724 (we had 1734 before, 10 duplications removed)*/
