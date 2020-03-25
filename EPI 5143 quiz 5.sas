@@ -37,8 +37,15 @@ run;
 proc print data=diabetes;/*113083 observations in this dataset, diabetes coding was checked and it was correct*/
 run;
 
-proc freq data=diabetes;
+proc freq data=diabetes;/*coded as diabetic 1734, coded as non-diabetic 111349*/
 table dm;
+run;
+
+proc sort data=diabetes;/*sorting the data by "hdghraencwid" for the next step*/
+by hdghraencwid;
+run;
+
+proc print data=diabetes;/*113083 observations in this dataset, diabetes coding was checked and it was correct*/
 run;
 
 
