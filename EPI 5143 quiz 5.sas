@@ -73,7 +73,7 @@ run;
 proc print data=diabetes;/*after flattening, 32844 observations*/
 run;
 
-proc freq data=diabetes;/*coded as diabetic 1724 (10 duplications removed), coded as non-diabetic 31120*/
+proc freq data=diabetes;/*coded as diabetic 1724 (we had 1734 before, 10 duplications removed)*/
 table dm count;
 run;
 
