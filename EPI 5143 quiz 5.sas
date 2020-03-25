@@ -58,7 +58,7 @@ run;
 
 
 data diabetes;
-set diag;
+set quiz5.nhrdiagnosis;
 by hdghraencwid;
 if first.hdghraencwid then do;
 dm=0; 
