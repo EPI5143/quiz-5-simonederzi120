@@ -105,7 +105,7 @@ run;
 
 
 *FINAL ANSWER: Proportion of admissions with recorded diagnosis of diabetes between 
-Jan 1, 2003 and Dec 31 2004: 83/2,230=3.72%
+Jan 1 2003 and Dec 31 2004: 83/2,230=3.72%
 
 dm    Frequency    Percent    Cumulative Frequency    Cumulative Percent 
 0         2147       96.28          2147                      96.28 
