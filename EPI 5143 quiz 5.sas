@@ -32,7 +32,7 @@ if hdgcd in: ('250' 'E11' 'E10') then dm=1;
 else dm=0;
 run;
 
-*********not sure if ill keep it*********;
+
 proc freq data=diabetes;
 table dm;
 run;
